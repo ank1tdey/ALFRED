@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ALFRED OS — v0.4</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23090a0c'/%3E%3Cpath d='M24 14.5 L21 8 L20 15 L13 12.5 C8.5 16 5.5 22 4 30 L9 27.5 L12.5 34 L17 29 L20.5 36 L24 40 L27.5 36 L31 29 L35.5 34 L39 27.5 L44 30 C42.5 22 39.5 16 35 12.5 L28 15 L27 8 Z' fill='%23e2c15a'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark"><svg class="brand-logo" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 14.5 L21 8 L20 15 L13 12.5 C8.5 16 5.5 22 4 30 L9 27.5 L12.5 34 L17 29 L20.5 36 L24 40 L27.5 36 L31 29 L35.5 34 L39 27.5 L44 30 C42.5 22 39.5 16 35 12.5 L28 15 L27 8 Z" fill="currentColor"/></svg></span>
+          <div>
+            <strong>ALFRED</strong>
+            <small>OS / v0.4</small>
+          </div>
+        </div>
+
+        <nav>
+          <button class="nav-item active" data-view="dashboard">
+            <span class="nav-icon">⌂</span><span class="nav-label">Command Center</span>
+          </button>
+          <button class="nav-item" data-view="tasks">
+            <span class="nav-icon">✓</span><span class="nav-label">Tasks</span>
+          </button>
+          <button class="nav-item" data-view="projects">
+            <span class="nav-icon">▦</span><span class="nav-label">Projects</span>
+          </button>
+          <button class="nav-item" data-view="notes">
+            <span class="nav-icon">▤</span><span class="nav-label">Notes</span>
+          </button>
+          <button class="nav-item" data-view="knowledge">
+            <span class="nav-icon">◇</span><span class="nav-label">Knowledge</span>
+          </button>
+          <button class="nav-item" data-view="ai">
+            <span class="nav-icon">◈</span><span class="nav-label">Alfred AI</span>
+          </button>
+        </nav>
+
+        <div class="side-bottom">
+          <button class="nav-item" data-view="settings">
+            <span class="nav-icon">⚙</span><span class="nav-label">Settings</span>
+          </button>
+          <div class="status"><i></i><span id="coreStatus">Checking…</span></div>
+        </div>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div class="crumb">ALFRED / <b id="pageTitle">COMMAND CENTER</b></div>
+          <div class="top-actions">
+            <span id="clock">00:00:00</span>
+            <button id="newBtn">+ New</button>
+          </div>
+        </header>
+
+        <section id="content" class="content"></section>
+      </main>
+    </div>
+
+    <script src="core.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
